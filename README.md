@@ -29,5 +29,5 @@ docker pull danmichaelmolina/tasklist-api:1.0.0
 ```
 #### Run
 ```sh
-docker run -p 3000:3000 danmichaelmolina/tasklist-api:1.0.0
+docker run -p 9000:9000 danmichaelmolina/tasklist-api:1.0.0
 ```
