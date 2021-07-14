@@ -9,8 +9,13 @@ model.baseDir = path.join(__dirname,'/../../../.data/');
 
 // Write the data to a file
 model.create = (data, callback) => {
+    let flag = 'wx';
+    if (fs.existsSync(model.baseDir + '/tasks.json')) {
+        flag = 'r+';
+    }
+
     // Open the file for writing
-    fs.open(model.baseDir + '/tasks.json', 'wx', (err, fileDescriptor) => {
+    fs.open(model.baseDir + '/tasks.json', flag, (err, fileDescriptor) => {
         if(!err && fileDescriptor) {
             // Convert data to string
             var stringData = JSON.stringify(data);

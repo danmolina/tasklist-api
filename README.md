@@ -18,7 +18,7 @@ npm install
 
 #### Run
 ```sh
-    npm start
+npm start
 ```
 
 
